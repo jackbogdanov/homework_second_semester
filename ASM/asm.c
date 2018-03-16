@@ -167,7 +167,7 @@ void start_program(char * code_file) {
 
     char * line = calloc(sizeof(char), 255);
 
-    if (line != NULL) {
+    if (line != NULL && mf != NULL) {
 
         int is_finished = 1;
 
@@ -179,12 +179,13 @@ void start_program(char * code_file) {
                 printf("***********STOPPED IN LINE NUMBER: %d************\n", mf->command_num);
             }
         }
+
+        fclose(mf->file);
     }
 
     free(line);
     free(func);
     free_info(info);
-    fclose(mf->file);
     free(mf);
 }
 
