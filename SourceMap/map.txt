@@ -1,0 +1,11 @@
+{
+    "version": 3,
+    "file": "sum.js",
+    "sources": ["sum.c"],
+    "names": ["int", "sum(int a,", "int b)", "{", "return", "a + b;", "}"],
+    "mappings": "AACAA,IACSC,WACOC,OACGC;IAEIC,OAEOC;AAGAC;"
+}
+
+
+
+
