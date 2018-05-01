@@ -155,7 +155,7 @@ public class Game {
         System.out.println("Возможный опции:");
         System.out.println("1 - заменить на реального игрока");
         System.out.println("2 - заменить на искуственный интеллект");
-        System.out.println("При выборе вторго пункта необходимо указать сложность(0 - 10) через пробел");
+        System.out.println("При выборе вторго пункта необходимо указать сложность(0 - 9) через пробел");
 
         String line = reader.readLine();
 
