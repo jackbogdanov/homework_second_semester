@@ -37,6 +37,7 @@ public class SourceMap {
             initNames(reader.readLine());
             initMappings(reader.readLine());
 
+            printMap();
             reader.close();
         } catch (IOException e) {
             System.out.println("Reading error!");
@@ -137,8 +138,8 @@ public class SourceMap {
         return linesCount;
     }
 
-    public String getFirstFileName() {
-        return names[0];
+    public String getSource(int i) {
+        return sources[i];
     }
 
     public void printMap() {
@@ -168,5 +169,9 @@ public class SourceMap {
         }
 
 
+    }
+
+    public String getFileOutName() {
+        return fileOutName;
     }
 }

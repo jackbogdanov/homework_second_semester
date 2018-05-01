@@ -8,7 +8,7 @@ public class SymbolDecoder {
         return decodeString.lastIndexOf(symbol);
     }
 
-    protected static int[] decode(String string) {
+    public static int[] decode(String string) {
         String binCode;
         String buf;
         int i = 0;
