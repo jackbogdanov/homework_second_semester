@@ -8,7 +8,7 @@ info * init_info();
 
 my_file * init_file(char * code_file);
 
-functions * init_functions();
+int * init_functions();
 
 int run_func(functions * funcs, char * word, info * info, my_file * my_file);
 

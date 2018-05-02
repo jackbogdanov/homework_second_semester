@@ -5,6 +5,7 @@
 #include "structs.h"
 
 
+
 //------------------
 int ldc(info *, char *, my_file *);
 int add(info *, char *, my_file *);
@@ -18,9 +19,10 @@ int sub(info *, char *, my_file *);
 //------------------
 
 info * init_info() {
+
+    info * info = calloc(sizeof(struct info), 1);
     int * mem = calloc(sizeof(int), MEM_SIZE);
     int * stack = calloc(sizeof(int), STACK_SIZE + HEAP_SIZE);
-    info * info = calloc(sizeof(info), 1);
 
     if (mem && stack && info) {
         info->mem = mem;
@@ -29,6 +31,7 @@ info * init_info() {
         info->heap_pointer = STACK_SIZE + HEAP_SIZE - 1;
     } else {
         printf("Err while memory and stack creating!\n");
+        return NULL;
     }
 
 }
@@ -41,7 +44,7 @@ my_file * init_file(char * code_file) {
         printf("Can't open file!\n");
         return NULL;
     } else {
-        my_file * my_file = calloc(sizeof(my_file), 1);
+        my_file * my_file = calloc(sizeof(struct file), 1);
 
         if (my_file != NULL) {
             my_file->command_num = 0;
@@ -57,27 +60,29 @@ my_file * init_file(char * code_file) {
 
 }
 
-functions * init_functions() {
-    functions * functions = calloc(sizeof(functions[0])* NUM_OF_COMMANDS, 1);
+int init_functions() {
+    pFunctions = calloc(sizeof(struct fun_pointers *), NUM_OF_COMMANDS);
 
     char * str[] = {"add", "ldc", "ret", "jmp", "br", "st", "cmp", "ld", "sub"};
     func_pointers methods[] = {add, ldc, ret, jmp, br, st, cmp, ld, sub};
 
-    if (functions != NULL) {
+    if (pFunctions != NULL) {
 
         for (int i = 0; i < NUM_OF_COMMANDS; ++i) {
-            functions[i]->name = str[i];
-            functions[i]->func = methods[i];
+            pFunctions[i] = calloc(sizeof(struct fun_pointers), 1);
+            pFunctions[i]->name = str[i];
+            pFunctions[i]->func = methods[i];
         }
 
-        return functions;
+        return SUCCESS_CODE;
+
     } else {
         printf("Err while fun creating!\n");
-        return NULL;
+        return STOP_CODE;
     }
 }
 
-int run_func(functions * funcs, char * word, info * info, my_file * my_file) {
+int run_func(char * word, info * info, my_file * my_file) {
 
     if (info->stack_pointer >= STACK_SIZE) {
         printf("Stack overflow!\n");
@@ -86,9 +91,9 @@ int run_func(functions * funcs, char * word, info * info, my_file * my_file) {
 
     for (int i = 0; i < NUM_OF_COMMANDS; ++i) {
 
-        if (!strcmp(funcs[i]->name, word)) {
+        if (!strcmp(pFunctions[i]->name, word)) {
             my_file->command_num += 1;
-            return funcs[i]->func(info, strtok(NULL, " "), my_file);
+            return pFunctions[i]->func(info, strtok(NULL, " "), my_file);
         }
     }
 
@@ -107,13 +112,13 @@ int find_label(info * info, char  label) {
     return NOT_FOUND_LABEL;
 }
 
-int parse_command(functions * funcs, char * command, info * info, my_file * myFile, int isFromJmp) {
+int parse_command(char * command, info * info, my_file * myFile, int isFromJmp) {
     int code = SUCCESS_CODE;
 
     if (command[COLON_CHECK] != ':') {
         if (command[NULL_SYMBOL_CHECK] != ';')  {
             char * words = strtok(command, " \n");
-            code = run_func(funcs, words, info, myFile);
+            code = run_func( words, info, myFile);
         } else {
             printf("-------------------------------------------------\n");
             myFile->command_num += 1;
@@ -123,30 +128,24 @@ int parse_command(functions * funcs, char * command, info * info, my_file * myFi
 
     } else {
 
-        if (isFromJmp == TRUE) {
-            free(funcs);
-            free(command);
-        } else {
-            if (find_label(info, command[LABEL_POSITION]) == NOT_FOUND_LABEL) {
+        if (find_label(info, command[LABEL_POSITION]) == NOT_FOUND_LABEL) {
 
-                memory_unit.i = myFile->command_num + 1;
-                memory_unit.i = memory_unit.i << sizeof(char) * 8;
-                memory_unit.c[0] = command[LABEL_POSITION];
+            memory_unit.i = myFile->command_num + 1;
+            memory_unit.i = memory_unit.i << sizeof(char) * 8;
+            memory_unit.c[0] = command[LABEL_POSITION];
 
-                info->stack[info->heap_pointer] =  memory_unit.i;
+            info->stack[info->heap_pointer] =  memory_unit.i;
 
-                info->heap_pointer -= 1;
+            info->heap_pointer -= 1;
 
-                if (info->heap_pointer < STACK_SIZE) {
-                    printf("Warning to much labels!\n");
-                }
-
+            if (info->heap_pointer < STACK_SIZE) {
+                printf("Warning to much labels!\n");
             }
+
         }
 
-
         strtok(command, " \n");
-        code = run_func(funcs, strtok(NULL, " \n"), info, myFile);
+        code = run_func( strtok(NULL, " \n"), info, myFile);
     }
     return code;
 }
@@ -160,21 +159,21 @@ void free_info(info * info) {
 void start_program(char * code_file) {
     printf("****************START PROGRAM!!!*****************\n");
 
-    functions * func = init_functions();
+    int initialCode = init_functions();
     info * info = init_info();
 
     my_file * mf = init_file(code_file);
 
     char * line = calloc(sizeof(char), 255);
 
-    if (line != NULL && mf != NULL) {
+    if (line != NULL && mf != NULL && info != NULL && initialCode == SUCCESS_CODE) {
 
         int is_finished = 1;
 
         while (is_finished) {
 
             fgets(line, 200, mf->file);
-            is_finished = parse_command(func, line, info, mf, FALSE);
+            is_finished = parse_command(line, info, mf, FALSE);
             if (!is_finished) {
                 printf("***********STOPPED IN LINE NUMBER: %d************\n", mf->command_num);
             }
@@ -184,7 +183,12 @@ void start_program(char * code_file) {
     }
 
     free(line);
-    free(func);
+    for (int i = 0; i < NUM_OF_COMMANDS; ++i) {
+        free(pFunctions[i]);
+    }
+
+    free(pFunctions);
+
     free_info(info);
     free(mf);
 }
@@ -343,10 +347,13 @@ int jmp(info * info, char * arg, my_file * my_file) {
                 }
             }
 
-            return parse_command(init_functions(), line, info, my_file, TRUE);
+            int k = parse_command(line, info, my_file, TRUE);
+            free(line);
+            return k;
         }
     } else {
         printf("Can't create buff!");
+        return STOP_CODE;
     }
     return SUCCESS_CODE;
 }
@@ -361,3 +368,4 @@ int br(info * info, char * arg, my_file * my_file) {
     printf("Not jump!\n");
     return SUCCESS_CODE;
 }
+

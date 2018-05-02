@@ -44,6 +44,7 @@ typedef int (*func_pointers)(info *, char *, my_file *);
 typedef struct fun_pointers {
     char * name;
     int (*func)(info *, char *, my_file *);
-} functions[NUM_OF_COMMANDS];
+} functions;
 
+functions ** pFunctions;
 #endif
