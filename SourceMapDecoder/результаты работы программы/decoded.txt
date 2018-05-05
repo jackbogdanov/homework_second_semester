@@ -1,0 +1,7 @@
+for file: map.txtword: int in line 0 Column 0 from 'sum.js  ->  Line 1 Column 0
+word: sum(int a, in line 0 Column 4 from 'sum.js  ->  Line 1 Column 9
+word: int b) in line 0 Column 15 from 'sum.js  ->  Line 1 Column 16
+word: { in line 0 Column 22 from 'sum.js  ->  Line 1 Column 19
+word: return in line 1 Column 4 from 'sum.js  ->  Line 2 Column 4
+word: a + b; in line 1 Column 11 from 'sum.js  ->  Line 2 Column 11
+word: } in line 2 Column 0 from 'sum.js  ->  Line 3 Column 0
