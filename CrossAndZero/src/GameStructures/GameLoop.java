@@ -4,11 +4,16 @@ import Players.Player;
 
 import java.util.ArrayList;
 
+import static GameStructures.Field.HEIGHT;
+import static GameStructures.Field.WIDTH;
+
 public class GameLoop {
 
     private Field field;
 
     private ArrayList<Player> players;
+
+    private static final int NUM_OF_OPERATIONS = WIDTH * HEIGHT;
 
     public GameLoop(Player playerOne, Player playerTwo, Field field) {
         this.field = field;
@@ -24,7 +29,7 @@ public class GameLoop {
         int cycleCount = 0;
         field.printField();
 
-        while (!field.winCheck() && cycleCount < 9) {
+        while (!field.winCheck() && cycleCount < NUM_OF_OPERATIONS) {
             players.get(i).makeTurn();
             System.out.println("Ход игрока " + (i + 1) + ":");
             field.printField();
@@ -35,13 +40,13 @@ public class GameLoop {
 
         field.printField();
 
-        if (cycleCount == 9 && !field.winCheck()) {
+        if (cycleCount == NUM_OF_OPERATIONS && !field.winCheck()) {
             System.out.println("Ничья!");
         } else {
             System.out.println("Победил игрок играющий за - " + players.get((i + 1) % 2).getSymbol() + "!");
         }
 
-
+        field.clearFiled();
 
     }
 

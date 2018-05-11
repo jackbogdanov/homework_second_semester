@@ -9,6 +9,9 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
+import static GameStructures.Field.HEIGHT;
+import static GameStructures.Field.WIDTH;
+
 public class SmartPlayer implements Player {
 
     protected class GoingCoords {
@@ -32,6 +35,8 @@ public class SmartPlayer implements Player {
 
     private final int BOT_SYMBOL = 0;
     private final int ENEMY_SYMBOL = 1;
+    private final int MIDDLE_DIFFICULTY = 3;
+    private final float MIDDLE_RANDOM = 1.2f;
 
     private int difficultyLevel;
     private char[] symbols;
@@ -57,10 +62,10 @@ public class SmartPlayer implements Player {
         GoingCoords highPriorityMovingCoordinates = null;
 
 
-        if (difficultyLevel > 3) {
+        if (difficultyLevel > MIDDLE_DIFFICULTY) {
             highPriorityMovingCoordinates = enemyWinCheck();
         } else {
-            if ((difficultyLevel * Math.random()) > 1.2) {
+            if ((difficultyLevel * Math.random()) > MIDDLE_RANDOM) {
                 highPriorityMovingCoordinates = enemyWinCheck();
             }
         }
@@ -82,8 +87,8 @@ public class SmartPlayer implements Player {
                     field.addSymbol(symbols[BOT_SYMBOL], movingCoordinates.x, movingCoordinates.y);
                 } else {
                     while (true) {
-                        int x = (int) (3*Math.random());
-                        int y = (int) (3*Math.random());
+                        int x = (int) (HEIGHT*Math.random());
+                        int y = (int) (WIDTH*Math.random());
 
 
                         if (field.getCell(x, y) == ' ') {
@@ -103,8 +108,8 @@ public class SmartPlayer implements Player {
         if (deep != difficultyLevel) {
 
             if (deep % 2 == 0) {
-                for (int i = 0; i < 3; i++) {
-                    for (int j = 0; j < 3; j++) {
+                for (int i = 0; i < WIDTH; i++) {
+                    for (int j = 0; j < HEIGHT; j++) {
                         try {
                             if (field.getCell(i, j) == ' ') {
 
@@ -146,8 +151,8 @@ public class SmartPlayer implements Player {
                 }
 
             } else {
-                for (int i = 0; i < 3; i++) {
-                    for (int j = 0; j < 3; j++) {
+                for (int i = 0; i < WIDTH; i++) {
+                    for (int j = 0; j < HEIGHT; j++) {
                         try {
                             if (field.getCell(i, j) == ' '){
                                 field.addSymbol(symbols[ENEMY_SYMBOL], i, j);
@@ -224,7 +229,6 @@ public class SmartPlayer implements Player {
         }
 
 
-        //System.out.println("RETURN NULL!!");
         return  bestMoving;
     }
 
@@ -235,8 +239,8 @@ public class SmartPlayer implements Player {
 
     private GoingCoords enemyWinCheck() {
 
-        for (int i = 0; i < 3; i++) {
-            for (int j = 0; j < 3; j++) {
+        for (int i = 0; i < WIDTH; i++) {
+            for (int j = 0; j < HEIGHT; j++) {
                 try {
                     if (copyOfField.getCell(i, j) == ' ') {
                         copyOfField.addSymbol(symbols[ENEMY_SYMBOL], i, j);
@@ -270,7 +274,7 @@ public class SmartPlayer implements Player {
     }
 
     public void setSymbols(char[] symbols) throws IncorrectSymbolsException {
-        if (symbols.length == 2) {
+        if (symbols.length == BASE_SYMBOL_LENGTH) {
             this.symbols = symbols;
         } else {
             throw new IncorrectSymbolsException(symbols);
@@ -279,7 +283,7 @@ public class SmartPlayer implements Player {
 
     @Override
     public String toString() {
-        if (difficultyLevel > 3) {
+        if (difficultyLevel > MIDDLE_DIFFICULTY) {
             return "Сложный игрок, сложность - " + difficultyLevel;
         } else {
             return "Средний игрок, сложность - " + difficultyLevel;

@@ -1,8 +1,12 @@
 package Players;
 
+
 import Exceptions.IncorrectSymbolsException;
 import Exceptions.OutOfFiledException;
 import GameStructures.Field;
+
+import static GameStructures.Field.HEIGHT;
+import static GameStructures.Field.WIDTH;
 
 public class EasyPlayer implements Player {
 
@@ -19,8 +23,8 @@ public class EasyPlayer implements Player {
     public void makeTurn() {
 
         while (true) {
-            int x = (int) (3*Math.random());
-            int y = (int) (3*Math.random());
+            int x = (int) (HEIGHT*Math.random());
+            int y = (int) (WIDTH*Math.random());
 
             try {
                 if (field.getCell(x, y) == ' ') {
@@ -40,7 +44,7 @@ public class EasyPlayer implements Player {
 
     @Override
     public void setSymbols(char[] symbols) throws IncorrectSymbolsException {
-        if (symbols.length == 2) {
+        if (symbols.length == BASE_SYMBOL_LENGTH) {
             symbol = symbols[0];
         } else {
             throw new IncorrectSymbolsException(symbols);

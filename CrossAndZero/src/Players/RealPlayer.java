@@ -3,7 +3,6 @@ package Players;
 import Exceptions.IncorrectSymbolsException;
 import Exceptions.OutOfFiledException;
 import GameStructures.Field;
-import Players.Player;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -33,7 +32,7 @@ public class RealPlayer implements Player {
             String line = reader.readLine();
             String[] coords= line.split(" ");
 
-            if (coords.length == 2 && coords[0].matches("[1-3]") && coords[1].matches("[1-3]")) {
+            if (coords.length == BASE_SYMBOL_LENGTH && coords[0].matches("[1-3]") && coords[1].matches("[1-3]")) {
                 int x = Integer.parseInt(coords[0]) - 1;
                 int y = Integer.parseInt(coords[1]) - 1;
 
