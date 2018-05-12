@@ -19,7 +19,7 @@ public class Game {
 
     private Player p1;
     private Player p2;
-    private Field field;
+    private IField field;
 
     private ArrayList<Player> addedPlayers;
 
@@ -27,14 +27,8 @@ public class Game {
 
 
     public Game() {
-        field = new Field();
+
         addedPlayers = new ArrayList<>();
-
-        p1 = new RealPlayer(field);
-        p2 = new EasyPlayer(field);
-
-        loadPlugins();
-
         reader = new BufferedReader(new InputStreamReader(System.in));
     }
 
@@ -170,30 +164,35 @@ public class Game {
         System.out.println("При выборе вторго пункта необходимо указать сложность(0 - 9) через пробел");
 
         String line = reader.readLine();
-
         String[] s = line.split(" ");
 
-        if ((s.length == 1 && s[0].matches("1")) || (s.length == 2 && s[0].matches("2") && s[1].matches("[0-9]"))) {
+        while (true) {
+            if ((s.length == 1 && s[0].matches("1")) || (s.length == 2 && s[0].matches("2") && s[1].matches("[0-9]"))) {
 
-            if (s.length == 1) {
-                return new RealPlayer(field);
-            } else {
-                int num = Integer.parseInt(s[1]);
-
-                if (num == 0) {
-                    return new EasyPlayer(field);
+                if (s.length == 1) {
+                    return new RealPlayer(field);
                 } else {
-                    return new SmartPlayer(field, num);
+                    int num = Integer.parseInt(s[1]);
+
+                    if (num == 0) {
+                        return new EasyPlayer(field);
+                    } else {
+                        return new SmartPlayer(field, num);
+                    }
                 }
+
             }
 
-        } else if (s[0].matches(String.valueOf(MENU_OFFSET - 1 + addedPlayers.size()))){
-            return addedPlayers.get(Integer.parseInt(s[0]) - MENU_OFFSET);
-        } else {
+            if (s[0].matches(String.valueOf(MENU_OFFSET - 1 + addedPlayers.size()))){
+                return addedPlayers.get(Integer.parseInt(s[0]) - MENU_OFFSET);
+            }
+
             System.out.println("Неправильный ввод!");
             System.out.println("Повторите попытку");
             return createNewPlayer();
         }
+
+
     }
 
     private void loadPlugins() {
@@ -209,12 +208,12 @@ public class Game {
 
                     Class loadedClass = loader.loadClass(pl.split(".class")[0]);
 
-                    IPlayerPlugin loadedPlayer = (IPlayerPlugin) loadedClass.newInstance(); //(Player) loadedClass.getDeclaredConstructor(Field.class, int.class).newInstance(field, 0);//(String.class).newInstance(field);
+                    IPlayerPlugin loadedPlayer = (IPlayerPlugin) loadedClass.newInstance();
+                    //(Player) loadedClass.getDeclaredConstructor(Field.class, int.class).newInstance(field, 0);
 
                     loadedPlayer.init(context);
 
                     addedPlayers.add( loadedPlayer);
-                    //System.out.println(loadedPlayer);
 
                 }
             } catch (ClassNotFoundException | IllegalAccessException |
@@ -232,5 +231,13 @@ public class Game {
         for (int i = 0; i < addedPlayers.size(); i++) {
             System.out.println((MENU_OFFSET + i) + " - Загруженный игрок: " + addedPlayers.get(i).toString());
         }
+    }
+
+    public void setField(IField field) {
+        this.field = field;
+        p1 = new RealPlayer(field);
+        p2 = new EasyPlayer(field);
+
+        loadPlugins();
     }
 }

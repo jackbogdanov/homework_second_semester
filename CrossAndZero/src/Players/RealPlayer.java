@@ -2,7 +2,7 @@ package Players;
 
 import Exceptions.IncorrectSymbolsException;
 import Exceptions.OutOfFiledException;
-import GameStructures.Field;
+import GameStructures.IField;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -12,9 +12,9 @@ public class RealPlayer implements Player {
 
     private BufferedReader reader;
     private char symbol;
-    private Field field;
+    private IField field;
 
-    public RealPlayer(Field field) {
+    public RealPlayer(IField field) {
 
         reader = new BufferedReader(new InputStreamReader(System.in));
         this.symbol = 'X';

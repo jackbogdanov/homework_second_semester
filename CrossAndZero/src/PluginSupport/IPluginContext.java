@@ -1,8 +1,9 @@
 package PluginSupport;
 
 import GameStructures.Field;
+import GameStructures.IField;
 
 public interface IPluginContext {
 
-    Field getField();
+    IField getField();
 }

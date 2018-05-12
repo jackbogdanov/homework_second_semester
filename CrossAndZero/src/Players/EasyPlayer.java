@@ -3,17 +3,17 @@ package Players;
 
 import Exceptions.IncorrectSymbolsException;
 import Exceptions.OutOfFiledException;
-import GameStructures.Field;
+import GameStructures.IField;
 
 import static GameStructures.Field.HEIGHT;
 import static GameStructures.Field.WIDTH;
 
 public class EasyPlayer implements Player {
 
-    private Field field;
+    private IField field;
     private char symbol;
 
-    public EasyPlayer(Field field)  {
+    public EasyPlayer(IField field)  {
         this.field = field;
         this.symbol = 'X';
 

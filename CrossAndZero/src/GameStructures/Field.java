@@ -2,7 +2,7 @@ package GameStructures;
 
 import Exceptions.OutOfFiledException;
 
-public class Field {
+public class Field implements IField{
 
     public char[][] field;
 

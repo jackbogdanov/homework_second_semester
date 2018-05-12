@@ -9,13 +9,13 @@ import static GameStructures.Field.WIDTH;
 
 public class GameLoop {
 
-    private Field field;
+    private IField field;
 
     private ArrayList<Player> players;
 
     private static final int NUM_OF_OPERATIONS = WIDTH * HEIGHT;
 
-    public GameLoop(Player playerOne, Player playerTwo, Field field) {
+    public GameLoop(Player playerOne, Player playerTwo, IField field) {
         this.field = field;
 
         players = new ArrayList<>();

@@ -1,17 +1,18 @@
 package PluginSupport;
 
 import GameStructures.Field;
+import GameStructures.IField;
 
 public class GamePluginContext implements IPluginContext {
 
-    private Field field;
+    private IField field;
 
-    public GamePluginContext(Field field) {
+    public GamePluginContext(IField field) {
         this.field = field;
     }
 
     @Override
-    public Field getField() {
+    public IField getField() {
         return field;
     }
 }

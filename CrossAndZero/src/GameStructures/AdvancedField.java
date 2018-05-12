@@ -32,7 +32,7 @@ public class AdvancedField extends Field {
         return ' ';
     }
 
-    public void fillByField(Field map) {
+    public void fillByField(IField map) {
         for (int i = 0; i < WIDTH; i++) {
             for (int j = 0; j < HEIGHT; j++) {
                 try {

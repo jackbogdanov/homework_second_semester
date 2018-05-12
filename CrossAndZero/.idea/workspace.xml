@@ -15,19 +15,35 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="6" selection-start-line="6" selection-end-line="6" />
+            <state relative-caret-position="216">
+              <caret line="14" selection-start-line="14" selection-end-line="14" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Game.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="RealPlayer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Players/RealPlayer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="54">
+              <caret line="3" column="38" selection-start-line="3" selection-start-column="38" selection-end-line="3" selection-end-column="38" />
+              <folding>
+                <element signature="method#setSymbols#0;class#RealPlayer#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Game.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/GameStructures/Game.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+            <state relative-caret-position="318">
+              <caret line="240" column="22" selection-start-line="240" selection-start-column="22" selection-end-line="240" selection-end-column="22" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="method#startMenuLoop#0;class#Game#0" />
                 <element signature="method#printMenu#0;class#Game#0" />
                 <element signature="method#printSideOptionMenu#0;class#Game#0" />
                 <element signature="method#printCurrentPlayers#0;class#Game#0" />
@@ -35,10 +51,18 @@
                 <element signature="method#startGameLoop#0;class#Game#0" />
                 <element signature="method#playerChangeChose#0;class#Game#0" />
                 <element signature="method#changePlayers#0;class#Game#0" />
-                <element signature="method#createNewPlayer#0;class#Game#0" />
                 <element signature="method#loadPlugins#0;class#Game#0" />
                 <element signature="method#printPluginPlayers#0;class#Game#0" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="spring_configuration_file.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/spring_configuration_file.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="10" selection-start-line="10" selection-end-line="10" />
             </state>
           </provider>
         </entry>
@@ -49,6 +73,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="spring-beans.schema" />
         <option value="Interface" />
       </list>
     </option>
@@ -79,19 +104,21 @@
         <option value="$PROJECT_DIR$/src/GameStructures/BasePlayer.java" />
         <option value="$PROJECT_DIR$/src/Players/BasePlayer.java" />
         <option value="$PROJECT_DIR$/src/PluginSupport/PluginContext.java" />
-        <option value="$PROJECT_DIR$/src/PluginSupport/IPluginContext.java" />
-        <option value="$PROJECT_DIR$/src/PluginSupport/GamePluginContext.java" />
         <option value="$PROJECT_DIR$/src/PluginSupport/IPlayerPlugin.java" />
-        <option value="$PROJECT_DIR$/src/GameStructures/Field.java" />
-        <option value="$PROJECT_DIR$/src/GameStructures/GameLoop.java" />
-        <option value="$PROJECT_DIR$/src/GameStructures/AdvancedField.java" />
         <option value="$PROJECT_DIR$/src/Players/Player.java" />
-        <option value="$PROJECT_DIR$/src/Players/EasyPlayer.java" />
-        <option value="$PROJECT_DIR$/src/Players/RealPlayer.java" />
+        <option value="$PROJECT_DIR$/src/GameStructures/IField.java" />
+        <option value="$PROJECT_DIR$/src/GameStructures/GameLoop.java" />
+        <option value="$PROJECT_DIR$/src/GameStructures/Field.java" />
         <option value="$PROJECT_DIR$/src/Players/SmartPlayer.java" />
+        <option value="$PROJECT_DIR$/src/GameStructures/AdvancedField.java" />
+        <option value="$PROJECT_DIR$/src/PluginSupport/GamePluginContext.java" />
+        <option value="$PROJECT_DIR$/src/PluginSupport/IPluginContext.java" />
         <option value="$PROJECT_DIR$/src/PluginPlayer.java" />
-        <option value="$PROJECT_DIR$/src/GameStructures/Game.java" />
+        <option value="$PROJECT_DIR$/src/Players/EasyPlayer.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
+        <option value="$PROJECT_DIR$/resources/spring_configuration_file.xml" />
+        <option value="$PROJECT_DIR$/src/Players/RealPlayer.java" />
+        <option value="$PROJECT_DIR$/src/GameStructures/Game.java" />
       </list>
     </option>
   </component>
@@ -104,7 +131,7 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="129" />
     <option name="y" value="27" />
     <option name="width" value="1400" />
@@ -115,9 +142,33 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="AndroidView" />
-      <pane id="PackagesPane" />
+      <pane id="PackagesPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="CrossAndZero" type="58d84e3e:PackageViewProjectNode" />
+              <item name="CrossAndZero" type="616d4139:PackageViewModuleNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <expand>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="CrossAndZero" type="cbb8eebc:String" user="CrossAndZero" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="CrossAndZero" type="cbb8eebc:String" user="CrossAndZero" />
+              <item name=".idea" type="cbb8eebc:String" user=".idea" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -128,13 +179,7 @@
             <path>
               <item name="CrossAndZero" type="b2602c69:ProjectViewProjectNode" />
               <item name="CrossAndZero" type="462c0819:PsiDirectoryNode" />
-              <item name="bin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CrossAndZero" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CrossAndZero" type="462c0819:PsiDirectoryNode" />
-              <item name="bin" type="462c0819:PsiDirectoryNode" />
-              <item name="plugins" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="CrossAndZero" type="b2602c69:ProjectViewProjectNode" />
@@ -145,27 +190,26 @@
               <item name="CrossAndZero" type="b2602c69:ProjectViewProjectNode" />
               <item name="CrossAndZero" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Players" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CrossAndZero" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CrossAndZero" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="PluginSupport" type="462c0819:PsiDirectoryNode" />
+              <item name="GameStructures" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main" />
       <recent name="$PROJECT_DIR$/bin/plugins" />
       <recent name="$PROJECT_DIR$/src" />
     </key>
@@ -211,45 +255,47 @@
       <workItem from="1525182456550" duration="1152000" />
       <workItem from="1525965985655" duration="9681000" />
       <workItem from="1526040251979" duration="7108000" />
-      <workItem from="1526060583104" duration="989000" />
+      <workItem from="1526060583104" duration="2718000" />
+      <workItem from="1526143209499" duration="5373000" />
+      <workItem from="1526149159501" duration="193000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="67239000" />
+    <option name="totallyTimeSpent" value="74534000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="26" width="1600" height="874" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="7" weight="0.11901682" />
-      <window_info anchor="right" id="Palette&#9;" order="3" />
-      <window_info id="Image Layers" order="2" />
-      <window_info anchor="right" id="Capture Analysis" order="3" />
-      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="right" id="Maven Projects" order="3" />
-      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.20698577" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info id="Capture Tool" order="2" />
+      <window_info anchor="bottom" id="TODO" order="7" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.11901682" />
+      <window_info anchor="right" id="Palette&#9;" order="8" />
+      <window_info id="Image Layers" order="6" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="right" id="Maven Projects" order="7" />
+      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Run" order="3" weight="0.35446313" />
+      <window_info anchor="bottom" id="Version Control" order="11" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Spring" order="0" />
+      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info id="Capture Tool" order="3" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19" />
-      <window_info anchor="right" id="Database" order="3" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32988358" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19" />
+      <window_info anchor="right" id="Database" order="6" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info id="UI Designer" order="2" />
-      <window_info anchor="right" id="Theme Preview" order="3" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.6429495" />
+      <window_info id="UI Designer" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="bottom" id="Debug" order="4" weight="0.6429495" />
+      <window_info id="Favorites" order="5" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="1" />
+      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="2" weight="0.32988358" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -264,71 +310,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/GameStructures/Field.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-          <folding>
-            <element signature="method#clearFiled#0;class#Field#0" />
-            <element signature="method#printField#0;class#Field#0" />
-            <element signature="method#addSymbol#0;class#Field#0" />
-            <element signature="method#winCheck#0;class#Field#0" />
-            <element signature="method#getCell#0;class#Field#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/PluginPlayer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="10" column="35" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GameStructures/GameLoop.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="28" column="55" selection-start-line="28" selection-start-column="55" selection-end-line="28" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Players/SmartPlayer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="756">
-          <caret line="42" column="51" selection-start-line="42" selection-start-column="51" selection-end-line="42" selection-end-column="51" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="class#GoingCoords#0;class#SmartPlayer#0" />
-            <element signature="method#findCoordsInList#0;class#SmartPlayer#0" />
-            <element signature="method#printWinGames#0;class#SmartPlayer#0" />
-            <element signature="method#findBestMoving#0;class#SmartPlayer#0" />
-            <element signature="method#initWinGames#0;class#SmartPlayer#0" />
-            <element signature="method#preparingForTurn#0;class#SmartPlayer#0" />
-            <element signature="method#toString#0;class#SmartPlayer#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GameStructures/Game.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="30" column="43" selection-start-line="30" selection-start-column="33" selection-end-line="30" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#printMenu#0;class#Game#0" />
-            <element signature="method#printSideOptionMenu#0;class#Game#0" />
-            <element signature="method#printCurrentPlayers#0;class#Game#0" />
-            <element signature="method#callMenuMethod#0;class#Game#0" />
-            <element signature="method#startGameLoop#0;class#Game#0" />
-            <element signature="method#playerChangeChose#0;class#Game#0" />
-            <element signature="method#changePlayers#0;class#Game#0" />
-            <element signature="method#createNewPlayer#0;class#Game#0" />
-            <element signature="method#loadPlugins#0;class#Game#0" />
-            <element signature="method#printPluginPlayers#0;class#Game#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
@@ -348,7 +329,6 @@
         <state relative-caret-position="1152">
           <caret line="75" selection-start-line="75" selection-end-line="75" />
           <folding>
-            <element signature="method#RealPlayer#0;class#RealPlayer#0" />
             <element signature="method#setSymbols#0;class#RealPlayer#0" />
           </folding>
         </state>
@@ -387,6 +367,7 @@
           <caret line="157" column="87" selection-start-line="157" selection-start-column="87" selection-end-line="157" selection-end-column="87" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#startMenuLoop#0;class#Game#0" />
             <element signature="method#printMenu#0;class#Game#0" />
             <element signature="method#printSideOptionMenu#0;class#Game#0" />
             <element signature="method#printCurrentPlayers#0;class#Game#0" />
@@ -394,7 +375,6 @@
             <element signature="method#startGameLoop#0;class#Game#0" />
             <element signature="method#playerChangeChose#0;class#Game#0" />
             <element signature="method#changePlayers#0;class#Game#0" />
-            <element signature="method#createNewPlayer#0;class#Game#0" />
             <element signature="method#loadPlugins#0;class#Game#0" />
             <element signature="method#printPluginPlayers#0;class#Game#0" />
           </folding>
@@ -414,6 +394,7 @@
           <caret line="21" column="18" lean-forward="true" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#startMenuLoop#0;class#Game#0" />
             <element signature="method#printMenu#0;class#Game#0" />
             <element signature="method#printSideOptionMenu#0;class#Game#0" />
             <element signature="method#printCurrentPlayers#0;class#Game#0" />
@@ -421,7 +402,6 @@
             <element signature="method#startGameLoop#0;class#Game#0" />
             <element signature="method#playerChangeChose#0;class#Game#0" />
             <element signature="method#changePlayers#0;class#Game#0" />
-            <element signature="method#createNewPlayer#0;class#Game#0" />
             <element signature="method#loadPlugins#0;class#Game#0" />
             <element signature="method#printPluginPlayers#0;class#Game#0" />
           </folding>
@@ -440,7 +420,6 @@
         <state relative-caret-position="1152">
           <caret line="75" selection-start-line="75" selection-end-line="75" />
           <folding>
-            <element signature="method#RealPlayer#0;class#RealPlayer#0" />
             <element signature="method#setSymbols#0;class#RealPlayer#0" />
           </folding>
         </state>
@@ -577,9 +556,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CrossAndZero.iml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="uml://JAVA/Exceptions">
       <provider selected="true" editor-type-id="UmlEditorProvider">
         <state>
@@ -647,7 +623,6 @@
           <SelectedNodes />
           <Categories>
             <Category>Methods</Category>
-            <Category />
           </Categories>
           <SCOPE>All</SCOPE>
           <VISIBILITY>public</VISIBILITY>
@@ -662,13 +637,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Players/BasePlayer.java" />
-    <entry file="file://$PROJECT_DIR$/src/PluginSupport/IPluginContext.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="31" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/PluginSupport/IPlayerPlugin.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -693,128 +661,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Players/EasyPlayer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="792">
-          <caret line="46" column="48" selection-start-line="46" selection-start-column="48" selection-end-line="46" selection-end-column="48" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Players/RealPlayer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="28" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
-          <folding>
-            <element signature="method#RealPlayer#0;class#RealPlayer#0" />
-            <element signature="method#setSymbols#0;class#RealPlayer#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GameStructures/AdvancedField.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="34" column="39" selection-start-line="34" selection-start-column="39" selection-end-line="34" selection-end-column="39" />
-          <folding>
-            <element signature="e#150#151#0" expanded="true" />
-            <element signature="e#183#184#0" expanded="true" />
-            <element signature="method#advancedWinCheck#0;class#AdvancedField#0" />
-            <element signature="method#fillByField#0;class#AdvancedField#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GameStructures/Field.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="34" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
-          <folding>
-            <element signature="method#clearFiled#0;class#Field#0" />
-            <element signature="method#printField#0;class#Field#0" />
-            <element signature="method#addSymbol#0;class#Field#0" />
-            <element signature="method#winCheck#0;class#Field#0" />
-            <element signature="method#getCell#0;class#Field#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/PluginSupport/GamePluginContext.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="26" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
-          <folding>
-            <element signature="e#182#183#0" expanded="true" />
-            <element signature="e#216#217#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/PluginPlayer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="738">
-          <caret line="49" column="21" selection-start-line="49" selection-start-column="21" selection-end-line="49" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GameStructures/GameLoop.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Exceptions.uml">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>JAVA</ID>
-          <OriginalElement>Exceptions</OriginalElement>
-          <nodes>
-            <node x="0.0" y="0.0">Exceptions.IncorrectSymbolsException</node>
-            <node x="0.0" y="101.0">Exceptions.OutOfFiledException</node>
-          </nodes>
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="1.0" x="-317.0" y="46.0" />
-          <SelectedNodes />
-          <Categories>
-            <Category>Methods</Category>
-          </Categories>
-          <SCOPE>All</SCOPE>
-          <VISIBILITY>public</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GameStructures.uml">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>JAVA</ID>
-          <OriginalElement>GameStructures</OriginalElement>
-          <nodes>
-            <node x="0.0" y="0.0">GameStructures.Field</node>
-            <node x="0.0" y="351.0">GameStructures.Game</node>
-            <node x="12.0" y="202.0">GameStructures.AdvancedField</node>
-            <node x="266.0" y="351.0">GameStructures.GameLoop</node>
-          </nodes>
-          <notes />
-          <edges>
-            <edge source="GameStructures.AdvancedField" target="GameStructures.Field">
-              <point x="0.0" y="-52.0" />
-              <point x="0.0" y="76.0" />
-            </edge>
-          </edges>
-          <settings layout="Hierarchic Group" zoom="1.0" x="-279.0" y="168.0" />
-          <SelectedNodes />
-          <Categories>
-            <Category>Methods</Category>
-          </Categories>
-          <SCOPE>All</SCOPE>
-          <VISIBILITY>public</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Exceptions.uml" />
+    <entry file="file://$PROJECT_DIR$/GameStructures.uml" />
     <entry file="file://$PROJECT_DIR$/src/Players/Player.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
@@ -825,53 +673,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Players.uml">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>JAVA</ID>
-          <OriginalElement>Players</OriginalElement>
-          <nodes>
-            <node x="504.0" y="179.0">Players.EasyPlayer</node>
-            <node x="0.0" y="179.0">Players.SmartPlayer</node>
-            <node x="237.5" y="0.0">Players.Player</node>
-            <node x="24.5" y="357.0">Players.SmartPlayer.GoingCoords</node>
-            <node x="252.0" y="179.0">Players.RealPlayer</node>
-          </nodes>
-          <notes />
-          <edges>
-            <edge source="Players.SmartPlayer.GoingCoords" target="Players.SmartPlayer">
-              <point x="0.0" y="-28.0" />
-              <point x="0.0" y="64.0" />
-            </edge>
-            <edge source="Players.RealPlayer" target="Players.Player">
-              <point x="0.0" y="-64.0" />
-              <point x="0.0" y="64.5" />
-            </edge>
-            <edge source="Players.SmartPlayer" target="Players.Player">
-              <point x="0.0" y="-64.0" />
-              <point x="116.0" y="154.0" />
-              <point x="281.0" y="154.0" />
-              <point x="-87.0" y="64.5" />
-            </edge>
-            <edge source="Players.EasyPlayer" target="Players.Player">
-              <point x="0.0" y="-64.0" />
-              <point x="620.0" y="154.0" />
-              <point x="455.0" y="154.0" />
-              <point x="87.0" y="64.5" />
-            </edge>
-          </edges>
-          <settings layout="Hierarchic Group" zoom="1.0" x="-39.0" y="149.0" />
-          <SelectedNodes />
-          <Categories>
-            <Category>Fields</Category>
-            <Category>Methods</Category>
-            <Category />
-          </Categories>
-          <SCOPE>All</SCOPE>
-          <VISIBILITY>public</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Players.uml" />
     <entry file="uml://JAVA/PluginSupport">
       <provider selected="true" editor-type-id="UmlEditorProvider">
         <state>
@@ -900,18 +702,97 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/uiDesigner.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CrossAndZero.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="1" selection-start-line="1" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/spring-beans-4.3.16.RELEASE.jar!/org/springframework/beans/factory/support/AbstractBeanDefinitionReader.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="151">
+          <caret line="101" selection-start-line="101" selection-end-line="101" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/rt.jar!/java/lang/Override.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="14" column="18" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PluginSupport/IPluginContext.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="7" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PluginPlayer.java" />
+    <entry file="file://$PROJECT_DIR$/src/GameStructures/AdvancedField.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+          <folding>
+            <element signature="e#150#151#0" expanded="true" />
+            <element signature="e#183#184#0" expanded="true" />
+            <element signature="method#advancedWinCheck#0;class#AdvancedField#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GameStructures/Field.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" column="36" selection-start-line="4" selection-start-column="36" selection-end-line="4" selection-end-column="36" />
+          <folding>
+            <element signature="method#clearFiled#0;class#Field#0" />
+            <element signature="method#printField#0;class#Field#0" />
+            <element signature="method#addSymbol#0;class#Field#0" />
+            <element signature="method#winCheck#0;class#Field#0" />
+            <element signature="method#getCell#0;class#Field#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GameStructures/IField.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Players/EasyPlayer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" column="38" selection-start-line="4" selection-start-column="38" selection-end-line="4" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Players/SmartPlayer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3690">
-          <caret line="284" column="29" selection-start-line="284" selection-start-column="29" selection-end-line="284" selection-end-column="29" />
+        <state relative-caret-position="901">
+          <caret line="271" column="36" selection-start-line="271" selection-start-column="36" selection-end-line="271" selection-end-column="36" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="class#GoingCoords#0;class#SmartPlayer#0" />
+            <element signature="method#makeTurn#0;class#SmartPlayer#0" />
+            <element signature="method#findingOptimum#0;class#SmartPlayer#0" />
             <element signature="method#findCoordsInList#0;class#SmartPlayer#0" />
             <element signature="method#printWinGames#0;class#SmartPlayer#0" />
             <element signature="method#findBestMoving#0;class#SmartPlayer#0" />
+            <element signature="method#enemyWinCheck#0;class#SmartPlayer#0" />
             <element signature="method#initWinGames#0;class#SmartPlayer#0" />
             <element signature="method#preparingForTurn#0;class#SmartPlayer#0" />
+            <element signature="method#setSymbols#0;class#SmartPlayer#0" />
             <element signature="method#toString#0;class#SmartPlayer#0" />
           </folding>
         </state>
@@ -927,19 +808,53 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/PluginSupport/GamePluginContext.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="49" selection-start-line="5" selection-start-column="49" selection-end-line="5" selection-end-column="49" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Players/RealPlayer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="3" column="38" selection-start-line="3" selection-start-column="38" selection-end-line="3" selection-end-column="38" />
+          <folding>
+            <element signature="method#setSymbols#0;class#RealPlayer#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        <state relative-caret-position="216">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GameStructures/GameLoop.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-234">
+          <caret line="11" column="20" lean-forward="true" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GameStructures/Game.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+        <state relative-caret-position="318">
+          <caret line="240" column="22" selection-start-line="240" selection-start-column="22" selection-end-line="240" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#startMenuLoop#0;class#Game#0" />
             <element signature="method#printMenu#0;class#Game#0" />
             <element signature="method#printSideOptionMenu#0;class#Game#0" />
             <element signature="method#printCurrentPlayers#0;class#Game#0" />
@@ -947,12 +862,94 @@
             <element signature="method#startGameLoop#0;class#Game#0" />
             <element signature="method#playerChangeChose#0;class#Game#0" />
             <element signature="method#changePlayers#0;class#Game#0" />
-            <element signature="method#createNewPlayer#0;class#Game#0" />
             <element signature="method#loadPlugins#0;class#Game#0" />
             <element signature="method#printPluginPlayers#0;class#Game#0" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/resources/spring_configuration_file.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Spring</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>CrossAndZero</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Spring-4.3.16.RELEASE</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>

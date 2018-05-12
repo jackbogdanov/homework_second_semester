@@ -4,6 +4,7 @@ import Exceptions.IncorrectSymbolsException;
 import Exceptions.OutOfFiledException;
 import GameStructures.AdvancedField;
 import GameStructures.Field;
+import GameStructures.IField;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -41,11 +42,11 @@ public class SmartPlayer implements Player {
     private int difficultyLevel;
     private char[] symbols;
     private GoingCoords goingCoords;
-    private Field field;
+    private IField field;
     private AdvancedField copyOfField;
     private HashMap<Integer, ArrayList<GoingCoords>> winGames;
 
-    public SmartPlayer(Field field, int difficulty) {
+    public SmartPlayer(IField field, int difficulty) {
         difficultyLevel = difficulty;
         this.field = field;
         this.symbols = new char[]{'X', 'O'};
